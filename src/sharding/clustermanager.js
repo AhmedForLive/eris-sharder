@@ -435,23 +435,6 @@ class ClusterManager extends EventEmitter {
         }
     }
 
-    printLogo() {
-        const logo = require('asciiart-logo');
-        console.log(
-            logo({
-                name: this.name,
-                font: 'Big',
-                lineChars: 15,
-                padding: 5,
-                margin: 2
-            })
-                .emptyLine()
-                .right(`eris-sharder ${pkg.version}`)
-                .emptyLine()
-                .render()
-        );
-    }
-
     restartCluster(worker, code, signal) {
         const clusterID = this.workers.get(worker.id);
 
