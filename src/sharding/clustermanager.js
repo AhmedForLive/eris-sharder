@@ -36,7 +36,7 @@ class ClusterManager extends EventEmitter {
         this.workers = new Map();
         this.queue = new Queue();
         this.callbacks = new Map();
-
+        this.db = options.db || null
         this.options = {
             stats: options.stats || false,
             debug: options.debug || false
