@@ -171,8 +171,6 @@ class ClusterManager extends EventEmitter {
                 logger.error("Cluster Manager", err.stack);
             });
 
-            this.printLogo();
-
             process.nextTick(async () => {
                 logger.info("General", "Cluster Manager has started!");
 
